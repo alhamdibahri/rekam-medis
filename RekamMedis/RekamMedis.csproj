@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F529E700-85BF-4041-AB68-CBE89C3F34CE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RekamMedis</RootNamespace>
+    <AssemblyName>RekamMedis</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="MetroFramework">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.12\Assemblies\v4.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Qios.DevSuite.Components, Version=4.0.0.20, Culture=neutral, PublicKeyToken=3cc53827b79c92fa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\QIOS\Qios.DevSuite.Components 4.0\Bin\Qios.DevSuite.Components.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormAddPenyakit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddPenyakit.Designer.cs">
+      <DependentUpon>FormAddPenyakit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddRwtInp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddRwtInp.Designer.cs">
+      <DependentUpon>FormAddRwtInp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddTindakan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddTindakan.Designer.cs">
+      <DependentUpon>FormAddTindakan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuatXML.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuatXML.Designer.cs">
+      <DependentUpon>FormBuatXML.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCariPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCariPasien.Designer.cs">
+      <DependentUpon>FormCariPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDiagnosa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDiagnosa.Designer.cs">
+      <DependentUpon>FormDiagnosa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDokter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDokter.Designer.cs">
+      <DependentUpon>FormDokter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormJadwalDokter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormJadwalDokter.Designer.cs">
+      <DependentUpon>FormJadwalDokter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKamar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKamar.Designer.cs">
+      <DependentUpon>FormKamar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKeluhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKeluhan.Designer.cs">
+      <DependentUpon>FormKeluhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLaporanPenyakit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLaporanPenyakit.Designer.cs">
+      <DependentUpon>FormLaporanPenyakit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormObat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormObat.Designer.cs">
+      <DependentUpon>FormObat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormObatPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormObatPasien.Designer.cs">
+      <DependentUpon>FormObatPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPasien.Designer.cs">
+      <DependentUpon>FormPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegistrasiPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegistrasiPasien.Designer.cs">
+      <DependentUpon>FormRegistrasiPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRekamMedik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRekamMedik.Designer.cs">
+      <DependentUpon>FormRekamMedik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRiwayatRawatInap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRiwayatRawatInap.Designer.cs">
+      <DependentUpon>FormRiwayatRawatInap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTindakan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTindakan.Designer.cs">
+      <DependentUpon>FormTindakan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUser.Designer.cs">
+      <DependentUpon>FormUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMaster.Designer.cs">
+      <DependentUpon>FormMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funct.cs" />
+    <Compile Include="GantiPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GantiPass.Designer.cs">
+      <DependentUpon>GantiPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Index.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Index.Designer.cs">
+      <DependentUpon>Index.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KunjunganPasien.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KunjunganPasien.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LaporanKunjunganPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LaporanKunjunganPasien.Designer.cs">
+      <DependentUpon>LaporanKunjunganPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LaporanObat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LaporanObat.Designer.cs">
+      <DependentUpon>LaporanObat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LaporanPenyakit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LaporanPenyakit.Designer.cs">
+      <DependentUpon>LaporanPenyakit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainLaporan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainLaporan.Designer.cs">
+      <DependentUpon>MainLaporan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Obat.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Obat.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Penyakit.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Penyakit.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewer.Designer.cs">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Struck.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Struck.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="FormAddPenyakit.resx">
+      <DependentUpon>FormAddPenyakit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddRwtInp.resx">
+      <DependentUpon>FormAddRwtInp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddTindakan.resx">
+      <DependentUpon>FormAddTindakan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuatXML.resx">
+      <DependentUpon>FormBuatXML.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCariPasien.resx">
+      <DependentUpon>FormCariPasien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDiagnosa.resx">
+      <DependentUpon>FormDiagnosa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDokter.resx">
+      <DependentUpon>FormDokter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormJadwalDokter.resx">
+      <DependentUpon>FormJadwalDokter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKamar.resx">
+      <DependentUpon>FormKamar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKeluhan.resx">
+      <DependentUpon>FormKeluhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLaporanPenyakit.resx">
+      <DependentUpon>FormLaporanPenyakit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormObat.resx">
+      <DependentUpon>FormObat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormObatPasien.resx">
+      <DependentUpon>FormObatPasien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPasien.resx">
+      <DependentUpon>FormPasien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistrasiPasien.resx">
+      <DependentUpon>FormRegistrasiPasien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRekamMedik.resx">
+      <DependentUpon>FormRekamMedik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRiwayatRawatInap.resx">
+      <DependentUpon>FormRiwayatRawatInap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTindakan.resx">
+      <DependentUpon>FormTindakan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUser.resx">
+      <DependentUpon>FormUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMaster.resx">
+      <DependentUpon>FormMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GantiPass.resx">
+      <DependentUpon>GantiPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Index.resx">
+      <DependentUpon>Index.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KunjunganPasien.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>KunjunganPasien.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LaporanKunjunganPasien.resx">
+      <DependentUpon>LaporanKunjunganPasien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LaporanObat.resx">
+      <DependentUpon>LaporanObat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LaporanPenyakit.resx">
+      <DependentUpon>LaporanPenyakit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainLaporan.resx">
+      <DependentUpon>MainLaporan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obat.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Obat.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penyakit.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Penyakit.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewer.resx">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Struck.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Struck.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\funct.datasource" />
+    <None Include="Properties\DataSources\RekamMedik.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-find-user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homepage.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kgpg_key2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock-2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\process-stop-4.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\process-stop-41.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock-21.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\address-book-new-3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-add-2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-empty-2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-edit1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-right-double-3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application-exit-4.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application-exit-41.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dialog-cancel-4.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application-exit-42.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Info.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\naruto-shippuden-backgrounds-wallpapers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Smart Alt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shopping cart.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+    <None Include="Resources\001_40.ico" />
+    <None Include="Resources\go-bottom-3.ico" />
+    <None Include="Resources\001_59.ico" />
+    <None Include="Resources\Generic App.ico" />
+    <None Include="Resources\bullet-key.ico" />
+    <None Include="Resources\user-suit.ico" />
+    <None Include="Resources\iconfinder_user_male_172625 %282%29.ico" />
+    <None Include="Resources\1.ico" />
+    <None Include="Resources\iconfinder_user_male_172625 %281%29.ico" />
+    <None Include="Resources\system-search-3.ico" />
+    <None Include="Resources\001_38.ico" />
+    <None Include="Resources\20171216-gempa-bumi-rsud-margono_20171216_111332.jpg" />
+    <None Include="Resources\modern-wallpaper-for-bedroom-bedroom-at-real-estate-10-wallpaper-rumah-sakit-yang-inspiratif.jpg" />
+    <None Include="Resources\41405030762_065c1fbb58_o.jpg" />
+    <None Include="Resources\limijati-hospital-2.jpg" />
+    <None Include="Resources\Chat.ico" />
+    <None Include="Resources\Contact1.ico" />
+    <None Include="Resources\kisspng-computer-icons-font-awesome-user-ill-people-5b4413a710f917.1375305715311881350695.jpg" />
+    <None Include="Resources\Contact.ico" />
+    <None Include="Resources\House.ico" />
+    <None Include="Resources\kamar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
